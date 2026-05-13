@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;family=Inter:wght@400;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glass-card:hover {
+            transform: scale(1.02);
+            backdrop-filter: blur(30px);
+            border-color: rgba(255, 255, 255, 0.4);
+        }
+        .gold-gradient {
+            background: linear-gradient(135deg, #cca730 0%, #ffe088 100%);
+        }
+        body {
+            background-color: #f9f9f9;
+            background-image: radial-gradient(at 0% 0%, rgba(218, 226, 255, 0.4) 0, transparent 50%), 
+                              radial-gradient(at 50% 0%, rgba(255, 224, 136, 0.1) 0, transparent 50%);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed-variant": "#0040a0",
+                        "surface-container-highest": "#e2e2e2",
+                        "error-container": "#ffdad6",
+                        "surface": "#f9f9f9",
+                        "inverse-surface": "#2f3131",
+                        "on-primary-fixed-variant": "#47464b",
+                        "inverse-on-surface": "#f0f1f1",
+                        "surface-container": "#eeeeee",
+                        "secondary-fixed": "#dae2ff",
+                        "surface-variant": "#e2e2e2",
+                        "surface-container-low": "#f3f3f3",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed": "#ffe088",
+                        "surface-container-lowest": "#ffffff",
+                        "outline": "#78767b",
+                        "primary-container": "#1b1b1f",
+                        "on-secondary-fixed": "#001847",
+                        "surface-dim": "#dadada",
+                        "primary-fixed": "#e4e1e7",
+                        "on-error": "#ffffff",
+                        "background": "#f9f9f9",
+                        "secondary-fixed-dim": "#b1c5ff",
+                        "on-tertiary-container": "#4f3e00",
+                        "on-primary": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-fixed": "#241a00",
+                        "surface-container-high": "#e8e8e8",
+                        "on-tertiary-fixed-variant": "#574500",
+                        "on-secondary-container": "#fefcff",
+                        "on-surface-variant": "#47464b",
+                        "secondary": "#0054cb",
+                        "tertiary-fixed-dim": "#e9c349",
+                        "tertiary-container": "#cca730",
+                        "tertiary": "#735c00",
+                        "on-surface": "#1a1c1c",
+                        "secondary-container": "#316ee8",
+                        "on-primary-container": "#848388",
+                        "inverse-primary": "#c8c5cb",
+                        "on-primary-fixed": "#1b1b1f",
+                        "primary-fixed-dim": "#c8c5cb",
+                        "on-background": "#1a1c1c",
+                        "outline-variant": "#c8c5cb",
+                        "on-error-container": "#93000a",
+                        "error": "#ba1a1a",
+                        "surface-tint": "#5f5e62",
+                        "surface-bright": "#f9f9f9",
+                        "primary": "#000000"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-max": "1440px",
+                        "margin-mobile": "20px",
+                        "unit": "8px",
+                        "margin-desktop": "80px",
+                        "gutter": "24px",
+                        "margin-tablet": "40px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter"],
+                        "title-md": ["Montserrat"],
+                        "body-lg": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "headline-lg-mobile": ["Montserrat"],
+                        "headline-lg": ["Montserrat"],
+                        "display-lg": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "title-md": ["20px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-sm": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["24px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="font-body-md text-on-surface">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/70 dark:bg-primary-container/70 backdrop-blur-xl border-b border-white/20">
+<div class="flex justify-between items-center px-margin-desktop h-20 max-w-container-max mx-auto">
+<div class="flex items-center gap-4">
+<img alt="Togolese national emblem" class="w-10 h-10 rounded-full" data-alt="A highly detailed 3D rendering of the Togolese national emblem featuring a vibrant color palette of emerald green, yellow, and red. The emblem is depicted with a metallic gold finish, reflecting soft studio lighting. It is placed against a clean, minimalist white background to emphasize a modern and prestigious municipal identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAW0FCyT04keXyT1nQiBImQcc42CuMYbxsyzZom-24cTGKxALBU9jLQoMkPnc414pqIU_jI_ipLXjbvQUlM-oqumFDItENSfJNOLSIV2a71G_RBx8P4Ld-XX7xPRLZGpF8dxr-7c5DDYoinyCsBzDRQKYBG6Oumx_v5gGGEg_B9VqTMEP2uZFKkm3WllHNAI_rBR2UvFxjiXkHe2rG40ELAnoNV0MynRcvAPxqQmdGzDfihGy9YdNWWQyGPe0ej6AUpMNxbgWHKsQ"/>
+<h1 class="text-title-md font-title-md font-bold text-on-secondary-fixed dark:text-white">Commune de Lomé</h1>
+</div>
+<nav class="hidden md:flex gap-8">
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-secondary font-label-sm text-label-sm transition-all duration-300" href="#">Accueil</a>
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-secondary font-label-sm text-label-sm transition-all duration-300" href="#">Citoyenneté</a>
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-secondary font-label-sm text-label-sm transition-all duration-300" href="#">Urbanisme</a>
+<a class="text-secondary dark:text-tertiary-fixed font-bold border-b-2 border-secondary dark:border-tertiary-fixed pb-1 font-label-sm text-label-sm" href="#">Fiscalité</a>
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-secondary font-label-sm text-label-sm transition-all duration-300" href="#">Actualités</a>
+</nav>
+<button class="bg-primary text-white px-6 py-2 rounded-full font-label-sm text-label-sm scale-102 transition-transform">E-Services</button>
+</div>
+</header>
+<div class="flex pt-20 min-h-screen max-w-container-max mx-auto px-margin-desktop gap-gutter">
+<!-- NavigationDrawer (Sidebar) -->
+<aside class="hidden lg:block w-80 shrink-0 py-unit-8">
+<div class="sticky top-28 bg-surface dark:bg-primary-container rounded-3xl p-6 shadow-xl border border-white/20">
+<h2 class="font-title-md text-title-md text-primary mb-8">Menu Municipal</h2>
+<nav class="space-y-4">
+<a class="flex items-center gap-4 p-4 text-on-surface-variant hover:bg-surface-container-high transition-colors rounded-xl" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-body-md text-body-md">Accueil</span>
+</a>
+<a class="flex items-center gap-4 p-4 text-on-surface-variant hover:bg-surface-container-high transition-colors rounded-xl" href="#">
+<span class="material-symbols-outlined">account_balance</span>
+<span class="font-body-md text-body-md">Citoyenneté</span>
+</a>
+<a class="flex items-center gap-4 p-4 text-on-surface-variant hover:bg-surface-container-high transition-colors rounded-xl" href="#">
+<span class="material-symbols-outlined">foundation</span>
+<span class="font-body-md text-body-md">Urbanisme</span>
+</a>
+<a class="flex items-center gap-4 p-4 bg-secondary-fixed dark:bg-secondary-container text-on-secondary-fixed rounded-xl transition-all" href="#">
+<span class="material-symbols-outlined">payments</span>
+<span class="font-body-md text-body-md font-bold">Fiscalité</span>
+</a>
+<a class="flex items-center gap-4 p-4 text-on-surface-variant hover:bg-surface-container-high transition-colors rounded-xl" href="#">
+<span class="material-symbols-outlined">newspaper</span>
+<span class="font-body-md text-body-md">Actualités</span>
+</a>
+</nav>
+<div class="mt-12 p-6 rounded-2xl bg-on-secondary-fixed text-white relative overflow-hidden">
+<div class="relative z-10">
+<p class="text-label-sm font-label-sm opacity-70 mb-2">Support Fiscal</p>
+<p class="font-body-md text-body-md font-bold">Besoin d'assistance ?</p>
+<button class="mt-4 text-tertiary-fixed font-label-sm text-label-sm underline">Contacter un agent</button>
+</div>
+<div class="absolute -right-4 -bottom-4 opacity-10">
+<span class="material-symbols-outlined text-[100px]">help_center</span>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="flex-grow py-unit-8 space-y-16">
+<!-- Section 1: Financial Overview (Bento Style) -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="md:col-span-2 glass-card p-unit-8 rounded-[32px] flex items-center justify-between">
+<div>
+<h3 class="font-title-md text-title-md text-on-secondary-fixed mb-2">Tableau de bord 2024</h3>
+<p class="text-on-surface-variant mb-6">Votre situation fiscale consolidée</p>
+<div class="space-y-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Total Taxes Annuel</span>
+<div class="font-display-lg text-display-lg text-primary">124.500 <span class="text-title-md">FCFA</span></div>
+</div>
+<div class="flex gap-6 mt-8">
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 rounded-full bg-secondary"></div>
+<span class="text-body-md font-bold">Payé: 93.375 FCFA</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 rounded-full bg-surface-container-highest"></div>
+<span class="text-body-md text-on-surface-variant">Restant: 31.125 FCFA</span>
+</div>
+</div>
+</div>
+<div class="relative flex items-center justify-center w-48 h-48">
+<svg class="w-full h-full transform -rotate-90">
+<circle class="text-surface-container" cx="96" cy="96" fill="transparent" r="80" stroke="currentColor" stroke-width="12"></circle>
+<circle class="text-secondary transition-all duration-1000" cx="96" cy="96" fill="transparent" r="80" stroke="currentColor" stroke-dasharray="502.6" stroke-dashoffset="125.65" stroke-width="12"></circle>
+</svg>
+<div class="absolute flex flex-col items-center">
+<span class="text-headline-lg font-headline-lg text-primary">75%</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant uppercase">Réglé</span>
+</div>
+</div>
+</div>
+<div class="glass-card p-unit-8 rounded-[32px] bg-secondary text-white border-none flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-white">verified_user</span>
+</div>
+<h4 class="font-title-md text-title-md mb-2">Conformité</h4>
+<p class="text-white/70 text-body-md">Votre dossier est à jour. Aucune pénalité de retard enregistrée cette année.</p>
+</div>
+<button class="w-full py-4 gold-gradient text-on-tertiary-fixed font-bold rounded-2xl transition-transform hover:scale-105">Télécharger le Quitus</button>
+</div>
+</section>
+<!-- Section 2: Tax Management Grid -->
+<section>
+<div class="flex justify-between items-end mb-8">
+<div>
+<h3 class="font-title-md text-title-md text-on-secondary-fixed">Mes Taxes Locales</h3>
+<p class="text-on-surface-variant">Gérez vos obligations par catégorie</p>
+</div>
+<button class="text-secondary font-bold flex items-center gap-2 hover:underline">
+                        Tout voir <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Tax Card 1 -->
+<div class="glass-card p-6 rounded-[24px]">
+<div class="flex justify-between items-start mb-6">
+<div class="w-12 h-12 rounded-xl bg-secondary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary">home_work</span>
+</div>
+<span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-label-sm font-label-sm">Payé</span>
+</div>
+<h5 class="font-title-md text-title-md mb-1">Taxe d'Habitation</h5>
+<p class="text-on-surface-variant text-body-md mb-6">Période : 2024</p>
+<div class="flex justify-between items-end">
+<div>
+<p class="text-label-sm font-label-sm text-on-surface-variant uppercase">Montant</p>
+<p class="text-title-md font-bold text-primary">15.000 FCFA</p>
+</div>
+<button class="w-10 h-10 rounded-full border border-outline/20 flex items-center justify-center hover:bg-surface-container">
+<span class="material-symbols-outlined text-on-surface-variant">visibility</span>
+</button>
+</div>
+</div>
+<!-- Tax Card 2 -->
+<div class="glass-card p-6 rounded-[24px]">
+<div class="flex justify-between items-start mb-6">
+<div class="w-12 h-12 rounded-xl bg-tertiary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary">storefront</span>
+</div>
+<span class="px-3 py-1 bg-amber-100 text-amber-700 rounded-full text-label-sm font-label-sm">En attente</span>
+</div>
+<h5 class="font-title-md text-title-md mb-1">Patente Commerciale</h5>
+<p class="text-on-surface-variant text-body-md mb-6">Échéance : 15 Mars 2024</p>
+<div class="flex justify-between items-end">
+<div>
+<p class="text-label-sm font-label-sm text-on-surface-variant uppercase">Montant</p>
+<p class="text-title-md font-bold text-primary">85.000 FCFA</p>
+</div>
+<button class="px-6 py-2 bg-on-secondary-fixed text-white rounded-xl font-label-sm text-label-sm hover:opacity-90">Payer</button>
+</div>
+</div>
+<!-- Tax Card 3 -->
+<div class="glass-card p-6 rounded-[24px]">
+<div class="flex justify-between items-start mb-6">
+<div class="w-12 h-12 rounded-xl bg-secondary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary">location_on</span>
+</div>
+<span class="px-3 py-1 bg-green-100 text-green-700 rounded-full text-label-sm font-label-sm">Payé</span>
+</div>
+<h5 class="font-title-md text-title-md mb-1">Taxe Foncière</h5>
+<p class="text-on-surface-variant text-body-md mb-6">Période : 2024</p>
+<div class="flex justify-between items-end">
+<div>
+<p class="text-label-sm font-label-sm text-on-surface-variant uppercase">Montant</p>
+<p class="text-title-md font-bold text-primary">24.500 FCFA</p>
+</div>
+<button class="w-10 h-10 rounded-full border border-outline/20 flex items-center justify-center hover:bg-surface-container">
+<span class="material-symbols-outlined text-on-surface-variant">visibility</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 3: Quick Payment & Calendar -->
+<section class="grid grid-cols-1 lg:grid-cols-2 gap-gutter">
+<!-- Quick Payment -->
+<div class="glass-card p-unit-8 rounded-[32px] overflow-hidden relative">
+<div class="relative z-10">
+<h3 class="font-title-md text-title-md text-on-secondary-fixed mb-6">Paiement Rapide</h3>
+<p class="text-body-md text-on-surface-variant mb-8">Réglez vos taxes instantanément via nos partenaires sécurisés.</p>
+<div class="grid grid-cols-2 gap-4 mb-8">
+<button class="flex flex-col items-center justify-center p-6 bg-white rounded-2xl border-2 border-transparent hover:border-secondary transition-all shadow-sm">
+<img alt="T-Money Logo" class="h-12 mb-4" data-alt="The T-Money mobile money logo characterized by vibrant yellow and blue colors, displayed in a high-resolution, professional digital format. The logo is clean and minimalist, set against a pristine white background to maintain a high-end fintech aesthetic within the municipal portal's payment section." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlpKf5qCUGNK3YnRbZFYaaVpf9Gv_lohTfN0cL_C4RHb7zJ3jdVKU19OXCHGLfbFdgzbFzvK-aGFJN2fRSrZd6HCqfKNLhrv1XLDVZXpgUwjLDsfnaTYXlZvQin4BXAdXoF53rM_hC9xuJWju7tIrpRV4vLI9s9TUkr4AJ16wGpF1vBB2Qt69D5G-_kxN2wpyJb7N8mfhHyff1nooMoOV7yCDPi-tTigTQCYVofICZrWw8e1tHPVZKqKbVn866Qf3XlcRDKaV3Hg"/>
+<span class="font-label-sm text-label-sm text-on-surface">T-Money</span>
+</button>
+<button class="flex flex-col items-center justify-center p-6 bg-white rounded-2xl border-2 border-transparent hover:border-secondary transition-all shadow-sm">
+<img alt="Flooz Logo" class="h-12 mb-4" data-alt="The Flooz mobile money logo featuring its signature orange and white branding. The visual style is modern, sleek, and high-contrast, designed to integrate seamlessly into a premium digital banking interface for the Togo Excellence Portal. The lighting is soft and uniform, emphasizing clarity and security." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHoK-cQXdHHYbX1OyCr1nTybXkkBaUeT5VulSDuD7esc71IkSy0DWeO1KeMXgM6MsxtQII0FInAnTiZTK9SCSx8B415r9xJdUzG1g-GXEj9zzD-6gr4CeIomB2E_3xa7flsVJ8O71FXLMTqcUm2PrNiw9ZI0AOZwUwyEvXrXauyaIsNrJoO42h0773SqBcxS9XvFego5ieo72W0SYRECTHBWSy_CWZbNiWVjrs-OxuPVH6vGz1OpYxPhoKLdlU9d3aP1m3Kp8yIg"/>
+<span class="font-label-sm text-label-sm text-on-surface">Moov Flooz</span>
+</button>
+</div>
+<div class="flex items-center gap-3 text-green-700 bg-green-50 p-4 rounded-xl border border-green-100">
+<span class="material-symbols-outlined">lock</span>
+<p class="text-label-sm font-label-sm">Transactions sécurisées par cryptage SSL 256 bits conforme aux normes BCEAO.</p>
+</div>
+</div>
+</div>
+<!-- Fiscal Calendar -->
+<div class="glass-card p-unit-8 rounded-[32px]">
+<h3 class="font-title-md text-title-md text-on-secondary-fixed mb-6">Calendrier Fiscal 2024</h3>
+<div class="space-y-6">
+<div class="flex items-center gap-6 p-4 rounded-2xl hover:bg-white/40 transition-colors">
+<div class="w-16 h-16 shrink-0 bg-secondary-container text-white flex flex-col items-center justify-center rounded-xl font-bold">
+<span class="text-label-sm uppercase">Mars</span>
+<span class="text-title-md">15</span>
+</div>
+<div>
+<p class="font-title-md text-title-md text-on-surface">Limite Patente</p>
+<p class="text-body-md text-on-surface-variant">Dernier délai pour le règlement de la patente commerciale sans pénalités.</p>
+</div>
+</div>
+<div class="flex items-center gap-6 p-4 rounded-2xl hover:bg-white/40 transition-colors">
+<div class="w-16 h-16 shrink-0 bg-surface-container-highest text-on-surface-variant flex flex-col items-center justify-center rounded-xl font-bold">
+<span class="text-label-sm uppercase">Juin</span>
+<span class="text-title-md">30</span>
+</div>
+<div>
+<p class="font-title-md text-title-md text-on-surface">Taxe d'Habitation</p>
+<p class="text-body-md text-on-surface-variant">Deuxième tranche pour les résidences principales.</p>
+</div>
+</div>
+<div class="flex items-center gap-6 p-4 rounded-2xl hover:bg-white/40 transition-colors">
+<div class="w-16 h-16 shrink-0 bg-surface-container-highest text-on-surface-variant flex flex-col items-center justify-center rounded-xl font-bold">
+<span class="text-label-sm uppercase">Déc</span>
+<span class="text-title-md">31</span>
+</div>
+<div>
+<p class="font-title-md text-title-md text-on-surface">Bilan Annuel</p>
+<p class="text-body-md text-on-surface-variant">Clôture de l'exercice fiscal 2024.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 4: Payment History Table -->
+<section class="glass-card rounded-[32px] overflow-hidden">
+<div class="p-unit-8 border-b border-white/20 flex justify-between items-center">
+<h3 class="font-title-md text-title-md text-on-secondary-fixed">Historique des Paiements</h3>
+<div class="flex gap-4">
+<div class="relative">
+<input class="pl-10 pr-4 py-2 rounded-full border-outline/20 bg-white/50 text-body-md focus:ring-secondary focus:border-secondary" placeholder="Rechercher..." type="text"/>
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-on-surface-variant">search</span>
+</div>
+<button class="flex items-center gap-2 px-4 py-2 border border-outline/20 rounded-full hover:bg-white transition-colors">
+<span class="material-symbols-outlined">filter_list</span>
+<span class="font-label-sm text-label-sm">Filtrer</span>
+</button>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase">
+<tr>
+<th class="px-8 py-4">ID Transaction</th>
+<th class="px-8 py-4">Date</th>
+<th class="px-8 py-4">Description</th>
+<th class="px-8 py-4">Montant</th>
+<th class="px-8 py-4 text-right">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-white/20">
+<tr class="hover:bg-white/30 transition-colors">
+<td class="px-8 py-6 font-bold text-secondary">#TX-902148</td>
+<td class="px-8 py-6 text-on-surface-variant">12 Jan 2024</td>
+<td class="px-8 py-6">Taxe Foncière - Maison Principale</td>
+<td class="px-8 py-6 font-bold">24.500 FCFA</td>
+<td class="px-8 py-6 text-right">
+<button class="text-on-secondary-fixed hover:text-secondary flex items-center gap-2 justify-end ml-auto">
+<span class="material-symbols-outlined">download</span> Reçu
+                                    </button>
+</td>
+</tr>
+<tr class="hover:bg-white/30 transition-colors">
+<td class="px-8 py-6 font-bold text-secondary">#TX-891105</td>
+<td class="px-8 py-6 text-on-surface-variant">05 Jan 2024</td>
+<td class="px-8 py-6">Taxe d'Habitation 2024</td>
+<td class="px-8 py-6 font-bold">15.000 FCFA</td>
+<td class="px-8 py-6 text-right">
+<button class="text-on-secondary-fixed hover:text-secondary flex items-center gap-2 justify-end ml-auto">
+<span class="material-symbols-outlined">download</span> Reçu
+                                    </button>
+</td>
+</tr>
+<tr class="hover:bg-white/30 transition-colors">
+<td class="px-8 py-6 font-bold text-secondary">#TX-774219</td>
+<td class="px-8 py-6 text-on-surface-variant">20 Déc 2023</td>
+<td class="px-8 py-6">Régularisation Patente 2023</td>
+<td class="px-8 py-6 font-bold">53.875 FCFA</td>
+<td class="px-8 py-6 text-right">
+<button class="text-on-secondary-fixed hover:text-secondary flex items-center gap-2 justify-end ml-auto">
+<span class="material-symbols-outlined">download</span> Reçu
+                                    </button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</main>
+</div>
+<!-- Footer -->
+<footer class="mt-32 w-full py-unit-8 bg-on-secondary-fixed dark:bg-primary-container border-t border-outline/30">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto text-white">
+<div class="space-y-6">
+<h4 class="font-title-md text-title-md text-tertiary-fixed">Commune de Lomé</h4>
+<p class="text-surface-variant/80 text-body-md leading-relaxed">Engagée dans une transformation numérique pour un service citoyen d'excellence, inspiré par les standards internationaux.</p>
+</div>
+<div class="space-y-6">
+<h4 class="font-title-md text-title-md">Navigation</h4>
+<ul class="space-y-3">
+<li><a class="text-surface-variant/80 hover:text-white transition-opacity duration-200 hover:underline" href="#">Accueil</a></li>
+<li><a class="text-surface-variant/80 hover:text-white transition-opacity duration-200 hover:underline" href="#">Services Publics</a></li>
+<li><a class="text-surface-variant/80 hover:text-white transition-opacity duration-200 hover:underline" href="#">Transparence</a></li>
+<li><a class="text-surface-variant/80 hover:text-white transition-opacity duration-200 hover:underline" href="#">Actualités</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h4 class="font-title-md text-title-md">Légal &amp; Support</h4>
+<ul class="space-y-3">
+<li><a class="text-surface-variant/80 hover:text-white transition-opacity duration-200 hover:underline" href="#">Contact</a></li>
+<li><a class="text-surface-variant/80 hover:text-white transition-opacity duration-200 hover:underline" href="#">Mentions Légales</a></li>
+<li><a class="text-surface-variant/80 hover:text-white transition-opacity duration-200 hover:underline" href="#">Plan du site</a></li>
+<li><a class="text-surface-variant/80 hover:text-white transition-opacity duration-200 hover:underline" href="#">Accessibilité</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h4 class="font-title-md text-title-md">Contact</h4>
+<p class="text-surface-variant/80 text-body-md">Hôtel de Ville de Lomé<br/>Avenue de la Marina<br/>Lomé, Togo</p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-tertiary-fixed">Notebook</span>
+<span class="material-symbols-outlined text-tertiary-fixed">language</span>
+<span class="material-symbols-outlined text-tertiary-fixed">mail</span>
+</div>
+</div>
+</div>
+<div class="mt-16 px-margin-desktop max-w-container-max mx-auto border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-surface-variant/60 text-label-sm font-label-sm">
+<p>© 2024 Commune de Lomé - Excellence &amp; Tradition.</p>
+<p>Développé par Lomé Digital Excellence Hub</p>
+</div>
+</footer>
+</body></html>

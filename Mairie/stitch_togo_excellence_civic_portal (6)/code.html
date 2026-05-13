@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Actualités | Ville de Lomé</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Montserrat:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error-container": "#ffdad6",
+                        "inverse-primary": "#c8c5cb",
+                        "on-tertiary": "#ffffff",
+                        "on-surface": "#1a1c1c",
+                        "primary-container": "#1b1b1f",
+                        "outline": "#78767b",
+                        "tertiary-fixed": "#ffe088",
+                        "primary-fixed-dim": "#c8c5cb",
+                        "secondary-fixed": "#dae2ff",
+                        "on-primary": "#ffffff",
+                        "background": "#f9f9f9",
+                        "surface-bright": "#f9f9f9",
+                        "on-error": "#ffffff",
+                        "surface": "#f9f9f9",
+                        "tertiary-fixed-dim": "#e9c349",
+                        "surface-container-high": "#e8e8e8",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-low": "#f3f3f3",
+                        "on-background": "#1a1c1c",
+                        "inverse-on-surface": "#f0f1f1",
+                        "on-secondary-container": "#fefcff",
+                        "primary": "#000000",
+                        "on-tertiary-fixed": "#241a00",
+                        "inverse-surface": "#2f3131",
+                        "secondary-container": "#316ee8",
+                        "surface-container": "#eeeeee",
+                        "on-error-container": "#93000a",
+                        "error": "#ba1a1a",
+                        "on-secondary-fixed-variant": "#0040a0",
+                        "outline-variant": "#c8c5cb",
+                        "on-surface-variant": "#47464b",
+                        "surface-variant": "#e2e2e2",
+                        "primary-fixed": "#e4e1e7",
+                        "on-tertiary-container": "#4f3e00",
+                        "on-secondary": "#ffffff",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-secondary-fixed": "#001847",
+                        "on-primary-fixed": "#1b1b1f",
+                        "surface-tint": "#5f5e62",
+                        "secondary-fixed-dim": "#b1c5ff",
+                        "tertiary-container": "#cca730",
+                        "secondary": "#0054cb",
+                        "tertiary": "#735c00",
+                        "surface-dim": "#dadada",
+                        "on-tertiary-fixed-variant": "#574500",
+                        "on-primary-fixed-variant": "#47464b",
+                        "on-primary-container": "#848388"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "margin-tablet": "40px",
+                        "gutter": "24px",
+                        "container-max": "1440px",
+                        "margin-desktop": "80px",
+                        "margin-mobile": "20px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "headline-lg-mobile": ["Montserrat"],
+                        "display-lg": ["Montserrat"],
+                        "title-md": ["Montserrat"],
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "label-sm": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["24px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "title-md": ["20px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .glass-container {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .hero-gradient {
+            background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 60%);
+        }
+        .gold-border-glow:hover {
+            border-color: #ffe088;
+            box-shadow: 0 0 15px rgba(255, 224, 136, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-background font-body-md text-on-background selection:bg-tertiary-fixed-dim selection:text-on-tertiary-fixed">
+<!-- 1. TopNavBar -->
+<nav class="fixed top-0 left-0 right-0 z-50 bg-surface/70 backdrop-blur-xl dark:bg-primary-container/70 border-b border-white/20 shadow-sm">
+<div class="flex justify-between items-center w-full px-margin-desktop py-4 max-w-container-max mx-auto">
+<!-- Brand Logo -->
+<div class="font-display-lg text-title-md font-bold tracking-widest text-primary dark:text-on-secondary-container">
+            VILLE DE LOMÉ
+        </div>
+<!-- Navigation Links -->
+<div class="hidden md:flex items-center gap-8">
+<a class="font-title-md text-title-md font-Montserrat text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Services</a>
+<a class="font-title-md text-title-md font-Montserrat text-tertiary font-bold border-b-2 border-tertiary pb-1" href="#">Actualités</a>
+<a class="font-title-md text-title-md font-Montserrat text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Culture</a>
+<a class="font-title-md text-title-md font-Montserrat text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Investir</a>
+<a class="font-title-md text-title-md font-Montserrat text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Tourisme</a>
+</div>
+<!-- Trailing Action & Search -->
+<div class="flex items-center gap-6">
+<div class="relative hidden lg:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-tertiary" data-icon="search">search</span>
+<input class="bg-surface-container border-none rounded-full pl-10 pr-4 py-2 text-sm focus:ring-2 focus:ring-tertiary-container w-64 transition-all" placeholder="Rechercher..." type="text"/>
+</div>
+<button class="bg-primary-container text-white px-6 py-2 rounded-full font-title-md text-sm hover:scale-105 transition-transform duration-300">
+                Mon Espace
+            </button>
+</div>
+</div>
+</nav>
+<main class="pt-24 space-y-[120px]">
+<!-- 2. Hero Section "À la Une" -->
+<section class="px-margin-desktop max-w-container-max mx-auto">
+<div class="relative aspect-[21/9] rounded-[32px] overflow-hidden group shadow-2xl">
+<img alt="Hero" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A grand architectural masterpiece showcasing a modern cultural center in Lomé at sunset. The building features sleek glass facades, golden decorative motifs inspired by Togolese heritage, and lush tropical landscaping. The warm, golden hour light casts long shadows, creating a prestigious and welcoming municipal atmosphere of excellence." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZ0c_VT58eVBkxvnLpV1Jjmvsb7JnQEWwP6aRJHnpfMGpPIcAqrXRm7kXB-9GGwm78yVUrqX9aU4ekCVf2aeUqcPvzbyBDWhGHB3FghPVnATQeSGNdYc34RlS8UsA9wqJRJqUtC2ASrBS_pVs6vpFNn0x3kES36vnI62hB9C9drZO-p1ovaXWqvbjdb-3KMddTvBS--GdwANw5qZqQErBHd6gCkKdo836E89qdJxV45hUe1ch62Q5u_ixGqCj7FZQAp_HNcsiT_Q"/>
+<div class="absolute inset-0 hero-gradient"></div>
+<div class="absolute bottom-12 left-12 right-12 flex justify-between items-end">
+<div class="glass-container p-10 rounded-[24px] max-w-2xl">
+<span class="inline-block bg-tertiary text-on-tertiary text-label-sm font-label-sm px-4 py-1 rounded-full mb-6">ÉVÉNEMENT MAJEUR</span>
+<h1 class="font-display-lg text-display-lg text-primary mb-4 leading-tight">Inauguration du Nouveau Centre de l'Excellence Culturelle</h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant mb-8 max-w-lg">Un nouveau phare pour la créativité et le rayonnement de la capitale togolaise, alliant modernité architecturale et héritage ancestral.</p>
+<button class="bg-primary text-white flex items-center gap-3 px-8 py-4 rounded-full font-title-md group/btn transition-all hover:bg-tertiary">
+                        Découvrir le projet
+                        <span class="material-symbols-outlined transition-transform group-hover/btn:translate-x-2" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. Barre d'Alertes Directes -->
+<section class="max-w-container-max mx-auto px-margin-desktop">
+<div class="bg-primary-container text-white rounded-full py-4 px-8 flex items-center justify-between border border-tertiary/30 shadow-lg">
+<div class="flex items-center gap-4">
+<div class="w-2 h-2 bg-tertiary-fixed rounded-full animate-pulse"></div>
+<span class="font-title-md text-sm tracking-widest text-tertiary-fixed uppercase">FLASH INFO :</span>
+<p class="font-body-md text-sm opacity-90">Prolongation des inscriptions pour les bourses communales jusqu'au 15 Octobre.</p>
+</div>
+<a class="text-xs font-bold underline hover:text-tertiary-fixed transition-colors" href="#">VOIR TOUTES LES ALERTES</a>
+</div>
+</section>
+<!-- 4. & 5. Filtres & Grille d'Actualités Dynamic Restructuring -->
+<section class="max-w-container-max mx-auto px-margin-desktop">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-2">Le Magazine Municipal</h2>
+<p class="text-on-surface-variant font-body-md">Suivez l'évolution de votre ville à travers nos rubriques spécialisées.</p>
+</div>
+<!-- Filters -->
+<div class="flex gap-2 bg-surface-container p-1 rounded-full border border-white">
+<button class="px-6 py-2 rounded-full bg-primary text-white font-title-md text-sm shadow-md">Toutes</button>
+<button class="px-6 py-2 rounded-full hover:bg-white transition-all font-title-md text-sm text-on-surface-variant">Projets</button>
+<button class="px-6 py-2 rounded-full hover:bg-white transition-all font-title-md text-sm text-on-surface-variant">Culture</button>
+<button class="px-6 py-2 rounded-full hover:bg-white transition-all font-title-md text-sm text-on-surface-variant">Sport</button>
+<button class="px-6 py-2 rounded-full hover:bg-white transition-all font-title-md text-sm text-on-surface-variant">Social</button>
+</div>
+</div>
+<!-- Dynamic Varied-Width Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Featured Article: Infrastructures (Primary Focus - 8 columns span) -->
+<article class="md:col-span-8 group bg-white rounded-[24px] overflow-hidden border border-white/40 shadow-sm gold-border-glow transition-all flex flex-col lg:flex-row">
+<div class="lg:w-1/2 overflow-hidden aspect-video lg:aspect-auto">
+<img alt="Infrastructures" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A birds-eye view of a modern urban development project in Togo. Symmetrical tree-lined avenues with sophisticated street lighting, pedestrian zones featuring geometric paving stones, and contemporary eco-friendly buildings. The aesthetic is clean, luxurious, and organized under a bright clear sky." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlx7EccLLrCT71cdVzEYbIa5L_vYdHU1llC-GJDG-uiL6g8I2BpEYfr2MvaazLVIcOD8Hy04wtW7rwoa2EUqEfxtpCWbNF2p6Rt34zvXlXrtv6yen6WYN6Hke5Z-s2WIeujOJyK1DPAWa_KsWGLI6eu38pu0OD7jj99Eejn37QQVTUWxHjLMJ_ewKAHuc6fu18ExSO5PnuMq7lOu6CT74GftTR5V1MLPFhDPSK4zRWfo6Fw4icGV28SWu-3vbfNY3165LVgOi6tg"/>
+</div>
+<div class="lg:w-1/2 p-10 flex flex-col justify-between">
+<div>
+<span class="text-tertiary font-label-sm text-label-sm tracking-widest uppercase mb-6 block">Infrastructures</span>
+<h3 class="font-headline-lg text-headline-lg text-primary mb-6 leading-tight">Lomé Grand Large : Phase 2 de la Modernisation Côtière</h3>
+<p class="text-on-surface-variant text-body-lg mb-8 line-clamp-4">Le projet d'aménagement du littoral franchit une nouvelle étape stratégique avec l'installation des zones de loisirs haute performance et de protection environnementale durable.</p>
+</div>
+<div class="flex items-center gap-4 pt-6 border-t border-surface-container">
+<img alt="Author" class="w-12 h-12 rounded-full border-2 border-surface-variant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUFwh4GwYyDTzY7aR4z97JrueB3DTYM1WpGehFYgZ1nQ6PO1AkrL00wDcCNnhH251RXRK9kduW-pfoRhoo9dkPMiHWWmMn5unj2laZZkagrsFs7j6cu478y15-qJ3DCoSpCJOUWndxnYC8Vx4MgnvKylsm1AkcGHGpZ6L_x2bq-q0T27lcWwJi4WSAI9SiwfayAvQHSTAsL_cPzngJV3VBN5x2_oihgm95QlWozHYSUDmm0LGVBZaKBj6-gFbzrXs2wFyZAS0w-Q"/>
+<div>
+<p class="font-title-md text-sm text-primary">Par Koffi Mensah</p>
+<p class="text-on-surface-variant text-xs">Il y a 2 heures</p>
+</div>
+</div>
+</div>
+</article>
+<!-- Social Card (Side focus - 4 columns span) -->
+<article class="md:col-span-4 group bg-white rounded-[24px] overflow-hidden border border-white/40 shadow-sm gold-border-glow transition-all flex flex-col">
+<div class="h-64 overflow-hidden relative">
+<img alt="Social" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwOtpuzlEtrjDvetdEDQWTJ49Wd4FP15fIGTUYzVWo7SnANoiTRnbOBRP4RSfTsWU4ARVcrmDonOZN_WxMuRiI8kYbzDLVMd_6B2iGntdSSCa6Qsw6NLD4gStU96rmZo1fZ-3Z2XBNB0Kliw0mQnnujmeyIOGo8X3NkEQjJ1JlKy8vt5F7RJBwugKEOFwb0KGnbrPSFLn1HaZmJyyVpuNNKgubbTt6CtiUdhqSddS9JRSGLJtDByI0Atkg7dZv17LT1RTaToRSig"/>
+<div class="absolute top-4 left-4">
+<span class="bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-[10px] px-3 py-1 rounded-full shadow-md">SOCIAL</span>
+</div>
+</div>
+<div class="p-8 flex-1 flex flex-col justify-between">
+<div>
+<h3 class="font-title-md text-headline-lg-mobile text-primary mb-4 leading-snug">Programme "Lomé Solidaire" : Résultats du Trimestre</h3>
+<p class="text-on-surface-variant text-body-md line-clamp-3">Plus de 500 familles ont bénéficié du nouveau dispositif d'accompagnement numérique municipal pour faciliter les démarches administratives.</p>
+</div>
+<a class="mt-8 flex items-center gap-2 text-primary font-bold text-sm group/link hover:text-tertiary transition-colors" href="#">
+                        Lire la suite
+                        <span class="material-symbols-outlined text-sm transition-transform group-hover/link:translate-x-1" data-icon="chevron_right">chevron_right</span>
+</a>
+</div>
+</article>
+<!-- Culture Card (Row 2 - 4 columns) -->
+<article class="md:col-span-4 group bg-white rounded-[24px] overflow-hidden border border-white/40 shadow-sm gold-border-glow transition-all">
+<div class="h-56 overflow-hidden">
+<img alt="Culture" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZ-FdcQlM1uH14C4_aePVM9OWLEH4JrvBm3eAeIBxAy86jfEeyJnl_GAdX_EEMNj_a7KAlP9ubkbP9CUNg7mN5eCSRCp6ZaCIvU4Y1YUg7Z-XMpkVqt9C6y19VR4DXHPjyOlol1wujtwUj4HTAUtiQrIZ3bouVy8AHas5Btnw7owHJ2OYIeGcqrEPWoasBshAMLOLSgMXBuNd7hXlTjKt-SHf0z3s5iWuCGXnHkSSHKSJYqz8QnYMCWnBrj5KHEeSKGG1lqtsH5Q"/>
+</div>
+<div class="p-8">
+<span class="text-secondary font-label-sm text-[10px] tracking-widest uppercase mb-4 block">Culture &amp; Festivals</span>
+<h3 class="font-title-md text-title-md text-primary mb-4 leading-snug">Festival de l'Innovation Urbaine : Candidatures</h3>
+<p class="text-on-surface-variant text-body-md line-clamp-2">Artistes et technologues sont invités à repenser l'espace public à travers la durabilité.</p>
+</div>
+</article>
+<!-- Economy Card (Row 2 - 4 columns) -->
+<article class="md:col-span-4 group bg-white rounded-[24px] overflow-hidden border border-white/40 shadow-sm gold-border-glow transition-all">
+<div class="h-56 overflow-hidden">
+<img alt="Economie" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-glAs6iow-CLXr6Dtng6WMUqkgMLl2z4EJuJ3Ra2zO6agOFOFHIK8710vPYMZzI0IW7PSJASfpB91iTk6RBV7hRlKMK4G42-MH6mZUyLWYg6IkEFkspJKpgYvVbfhvd0K0rlmBYFpuizGYgmfoZrFWw3Lx2FPFU0UAOM4WjxsCVwzsFemgX1ooWgOTaPH24vKhYwX-H7_Io06lpq1Fw_fLPI5yeJCfmZoiiHGayg_6PO-0w_pV1Oi9J1HAb3dTCNiiAVHM7gHAw"/>
+</div>
+<div class="p-8">
+<span class="text-tertiary font-label-sm text-[10px] tracking-widest uppercase mb-4 block">Économie</span>
+<h3 class="font-title-md text-title-md text-primary mb-4 leading-snug">Lomé dans le top 10 des villes innovantes</h3>
+<p class="text-on-surface-variant text-body-md line-clamp-2">Le rapport annuel souligne une croissance exceptionnelle de l'écosystème startup local.</p>
+</div>
+</article>
+<!-- Sport Card (Row 2 - 4 columns) -->
+<article class="md:col-span-4 group bg-white rounded-[24px] overflow-hidden border border-white/40 shadow-sm gold-border-glow transition-all">
+<div class="h-56 overflow-hidden">
+<img alt="Sport" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALdvJvNPMkUaRGEVz9DBpgvvziOVqL8yazLOUggN0hh_fY_2kH7HAHIbH_ioKyUf172RjOVYX2OEdLZvEAk8HtJtaLnI29M8nlJFIQLDljNYbJ92jQkYphX4pMI16pxgdEcWlTGmfjLLkMTsXCrJKGCCAlqgTkWLjHD4gHX0z49ZD0ZQ2Ynry2QgAmNmdvx-36kvW8Zj0HPBSg03qvU3klq0AfHyLTrYOPOsxutvCJfHN6-10vvKz1JzCpTXaj9GLuZuAEQY863w"/>
+</div>
+<div class="p-8">
+<span class="text-on-secondary-fixed-variant font-label-sm text-[10px] tracking-widest uppercase mb-4 block">Sport &amp; Jeunesse</span>
+<h3 class="font-title-md text-title-md text-primary mb-4 leading-snug">Complexe Sportif de l'Indépendance</h3>
+<p class="text-on-surface-variant text-body-md line-clamp-2">Les travaux de mise aux normes internationales débuteront pour les Jeux Régionaux.</p>
+</div>
+</article>
+</div>
+<div class="mt-20 text-center">
+<button class="px-12 py-5 border-2 border-primary-container rounded-full font-title-md hover:bg-primary-container hover:text-white transition-all duration-300 active:scale-95">
+                Charger plus d'actualités
+            </button>
+</div>
+</section>
+<!-- 6. Newsletter Premium -->
+<section class="max-w-container-max mx-auto px-margin-desktop mb-[120px]">
+<div class="relative rounded-[40px] overflow-hidden bg-primary-container p-20 text-white flex flex-col md:flex-row items-center justify-between gap-12">
+<!-- Abstract BG Glow -->
+<div class="absolute -top-1/2 -right-1/4 w-[600px] h-[600px] bg-tertiary-fixed opacity-10 blur-[120px] rounded-full"></div>
+<div class="relative z-10 max-w-xl">
+<h2 class="font-display-lg text-display-lg mb-6">Le Digest de l'Excellence</h2>
+<p class="text-body-lg opacity-70 mb-0">Rejoignez l'élite informée de la capitale. Recevez chaque semaine une analyse exclusive des projets qui façonnent l'avenir de Lomé.</p>
+</div>
+<div class="relative z-10 w-full max-w-md">
+<form class="flex flex-col gap-4">
+<div class="relative">
+<input class="w-full bg-white/5 border border-white/20 rounded-2xl py-5 px-6 text-white placeholder:text-white/40 focus:ring-2 focus:ring-tertiary-fixed transition-all outline-none" placeholder="votre@email.com" type="email"/>
+</div>
+<button class="bg-tertiary-fixed text-on-tertiary-fixed py-5 rounded-2xl font-title-md hover:bg-tertiary-fixed-dim transition-all active:scale-95">
+                        S'abonner maintenant
+                    </button>
+<p class="text-[10px] opacity-40 text-center">En vous abonnant, vous acceptez notre politique de confidentialité et la charte de transparence.</p>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- 7. Footer -->
+<footer class="bg-primary text-on-primary border-t border-white/10">
+<div class="max-w-container-max mx-auto px-margin-desktop py-12">
+<div class="flex flex-col md:flex-row justify-between items-center gap-gutter w-full">
+<!-- Brand Logo -->
+<div class="font-headline-lg text-headline-lg text-tertiary-fixed font-bold">
+                VILLE DE LOMÉ
+            </div>
+<!-- Footer Links -->
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-body-md text-body-md font-Inter text-on-primary/80 hover:text-tertiary-fixed hover:translate-x-1 transition-transform duration-300" href="#">Mentions Légales</a>
+<a class="font-body-md text-body-md font-Inter text-on-primary/80 hover:text-tertiary-fixed hover:translate-x-1 transition-transform duration-300" href="#">Contact</a>
+<a class="font-body-md text-body-md font-Inter text-on-primary/80 hover:text-tertiary-fixed hover:translate-x-1 transition-transform duration-300" href="#">Transparence</a>
+<a class="font-body-md text-body-md font-Inter text-on-primary/80 hover:text-tertiary-fixed hover:translate-x-1 transition-transform duration-300" href="#">Archives</a>
+<a class="font-body-md text-body-md font-Inter text-on-primary/80 hover:text-tertiary-fixed hover:translate-x-1 transition-transform duration-300" href="#">Plan du Site</a>
+</div>
+</div>
+<!-- Copyright and Socials -->
+<div class="mt-12 pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="font-body-md text-body-md font-Inter opacity-50">© 2024 Commune de Lomé - Excellence &amp; Innovation au service du Citoyen.</p>
+<div class="flex gap-6">
+<a class="text-white hover:text-tertiary-fixed transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="facebook">social_leaderboard</span>
+</a>
+<a class="text-white hover:text-tertiary-fixed transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="x">close</span>
+</a>
+<a class="text-white hover:text-tertiary-fixed transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="language">language</span>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

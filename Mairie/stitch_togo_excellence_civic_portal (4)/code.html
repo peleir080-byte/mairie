@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Urbanisme &amp; Foncier | Commune de Lomé</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary": "#ffffff",
+                    "primary-fixed": "#e4e1e7",
+                    "on-error-container": "#93000a",
+                    "on-tertiary": "#ffffff",
+                    "on-primary-container": "#848388",
+                    "surface-tint": "#5f5e62",
+                    "secondary-container": "#316ee8",
+                    "tertiary-container": "#cca730",
+                    "outline-variant": "#c8c5cb",
+                    "background": "#f9f9f9",
+                    "tertiary": "#735c00",
+                    "on-tertiary-container": "#4f3e00",
+                    "surface-container-high": "#e8e8e8",
+                    "on-secondary-container": "#fefcff",
+                    "surface-container-lowest": "#ffffff",
+                    "inverse-primary": "#c8c5cb",
+                    "surface-variant": "#e2e2e2",
+                    "surface-dim": "#dadada",
+                    "inverse-on-surface": "#f0f1f1",
+                    "secondary": "#0054cb",
+                    "on-surface-variant": "#47464b",
+                    "on-secondary-fixed": "#001847",
+                    "surface-container-low": "#f3f3f3",
+                    "on-primary": "#ffffff",
+                    "on-tertiary-fixed-variant": "#574500",
+                    "tertiary-fixed-dim": "#e9c349",
+                    "surface-bright": "#f9f9f9",
+                    "surface-container-highest": "#e2e2e2",
+                    "inverse-surface": "#2f3131",
+                    "secondary-fixed-dim": "#b1c5ff",
+                    "secondary-fixed": "#dae2ff",
+                    "primary-fixed-dim": "#c8c5cb",
+                    "on-tertiary-fixed": "#241a00",
+                    "outline": "#78767b",
+                    "on-error": "#ffffff",
+                    "on-secondary-fixed-variant": "#0040a0",
+                    "primary": "#000000",
+                    "error-container": "#ffdad6",
+                    "on-primary-fixed-variant": "#47464b",
+                    "surface": "#f9f9f9",
+                    "on-background": "#1a1c1c",
+                    "on-surface": "#1a1c1c",
+                    "on-primary-fixed": "#1b1b1f",
+                    "surface-container": "#eeeeee",
+                    "primary-container": "#1b1b1f",
+                    "error": "#ba1a1a",
+                    "tertiary-fixed": "#ffe088",
+                    "gold-accent": "#D4AF37"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-tablet": "40px",
+                    "container-max": "1440px",
+                    "margin-desktop": "80px",
+                    "unit": "8px",
+                    "margin-mobile": "20px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "headline-lg-mobile": ["Montserrat"],
+                    "body-md": ["Inter"],
+                    "headline-lg": ["Montserrat"],
+                    "display-lg": ["Montserrat"],
+                    "title-md": ["Montserrat"],
+                    "body-lg": ["Inter"],
+                    "label-sm": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-lg-mobile": ["24px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "title-md": ["20px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.05);
+        }
+        .dark .glass-card {
+            background: rgba(27, 27, 31, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .hero-gradient {
+            background: linear-gradient(180deg, rgba(0, 24, 71, 0.4) 0%, rgba(0, 0, 0, 0.8) 100%);
+        }
+        .gold-border-focus:focus-within {
+            border-color: #D4AF37;
+            box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/70 dark:bg-primary-container/70 backdrop-blur-xl border-b border-white/20 h-20">
+<div class="flex justify-between items-center px-margin-desktop h-full max-w-container-max mx-auto">
+<div class="flex items-center gap-4">
+<img alt="Togolese national emblem" class="h-12 w-auto" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDU423trLEZolX9Fycv8LZe2cWdiKc6Y3oLWMO32RnOqaQYR7cJKZkcKUvbbF5Qxi-mbo5aF5gPtVPDB3zuQUbi4H2m8lR6ZhJ862lR-a5c4hCmWbwg2SklobmtkOlPTuqXY1E-Zp2Lo50SlackKHr10KoZXhgFkDxcC0Y1m2-fMoQO-5NkFNTAN3BY5TBhoeazi4FPHyXmR8vaqkvRh7sm44RHjfKA_-zSyhj7jTSH7Ol_Vag2DS7iLTOxlkD8fkwjVTi2YmggNA"/>
+<span class="text-title-md font-title-md font-bold text-on-secondary-fixed dark:text-white">Commune de Lomé</span>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-secondary font-label-sm text-label-sm transition-all duration-300" href="#">Accueil</a>
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-secondary font-label-sm text-label-sm transition-all duration-300" href="#">Citoyenneté</a>
+<a class="text-secondary dark:text-tertiary-fixed font-bold border-b-2 border-secondary dark:border-tertiary-fixed pb-1 font-label-sm text-label-sm" href="#">Urbanisme</a>
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-secondary font-label-sm text-label-sm transition-all duration-300" href="#">Fiscalité</a>
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-secondary font-label-sm text-label-sm transition-all duration-300" href="#">Actualités</a>
+</nav>
+<button class="bg-on-secondary-fixed text-white px-6 py-2 rounded-full font-label-sm text-label-sm hover:backdrop-blur-3xl transition-all duration-300 scale-102">
+                E-Services
+            </button>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="relative h-[819px] w-full flex items-center justify-center overflow-hidden mt-20">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="A grand, hyper-realistic architectural visualization of a futuristic Lomé waterfront with sleek glass skyscrapers reflecting the golden sunset light. The scene captures a high-end minimalist urban planning vision with lush green parks interspersed between geometric white marble buildings. The atmosphere is prestigious and clean, reflecting the premium digital identity of Togo Excellence with deep blues and gold highlights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdWbozrY8MUx8lmsliFtGlf_y_uoJO_LGJXLPrk0eJV0B5NjWmmrxPtoEmQbUYOHL8GSS0h9xDgDUmX1-OckeiQ0kqVwu9MPuAUT3-xYsHefUX0q58rORfBgj9hDYX0HTzqKNXZNzEAPVJ2-Xz6-CNwWAgTUed4Y89wN03fjeT0UoEbIMTKC-xS0T9t498FtikxZofTEK7xAGiQvoXw9zEQV0yZB-mDoFpit77XQiWVhaE_cr2abYqzJ7RMRkCVNgS-ErF-Dxz5g"/>
+<div class="absolute inset-0 hero-gradient"></div>
+</div>
+<div class="relative z-10 text-center max-w-4xl px-margin-mobile">
+<h1 class="font-display-lg text-display-lg text-white mb-6">Urbanisme &amp; Gestion Foncière</h1>
+<p class="font-body-lg text-body-lg text-white/80 mb-12">Bâtir le Lomé de demain avec transparence, rigueur et excellence numérique.</p>
+<div class="max-w-2xl mx-auto glass-card rounded-full p-2 flex items-center gold-border-focus transition-all duration-300">
+<span class="material-symbols-outlined ml-6 text-gold-accent" style="font-variation-settings: 'FILL' 1;">search</span>
+<input class="bg-transparent border-none focus:ring-0 w-full px-4 text-on-surface placeholder-on-surface-variant font-body-md" placeholder="Vérifier un Titre Foncier (N° de réquisition...)" type="text"/>
+<button class="bg-on-secondary-fixed text-white px-8 py-4 rounded-full font-label-sm text-label-sm hover:bg-black transition-colors shrink-0">
+                    RECHERCHER
+                </button>
+</div>
+</div>
+</section>
+<!-- Services Grid -->
+<section class="py-20 px-margin-desktop max-w-container-max mx-auto -mt-24 relative z-20">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<!-- Card 1 -->
+<div class="glass-card p-8 rounded-[24px] group hover:scale-[1.02] transition-all duration-300 border-white/20">
+<div class="w-16 h-16 bg-on-secondary-fixed/5 rounded-xl flex items-center justify-center mb-6 group-hover:bg-gold-accent/10 transition-colors">
+<span class="material-symbols-outlined text-on-secondary-fixed text-4xl" data-icon="architecture">architecture</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-secondary-fixed mb-4">Permis de Construire</h3>
+<p class="text-on-surface-variant font-body-md mb-6">Soumettez et suivez vos demandes de construction en ligne avec validation accélérée.</p>
+<a class="inline-flex items-center text-gold-accent font-bold hover:gap-2 transition-all" href="#">
+                    Débuter <span class="material-symbols-outlined ml-1">arrow_forward</span>
+</a>
+</div>
+<!-- Card 2 -->
+<div class="glass-card p-8 rounded-[24px] group hover:scale-[1.02] transition-all duration-300 border-white/20">
+<div class="w-16 h-16 bg-on-secondary-fixed/5 rounded-xl flex items-center justify-center mb-6 group-hover:bg-gold-accent/10 transition-colors">
+<span class="material-symbols-outlined text-on-secondary-fixed text-4xl" data-icon="map">map</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-secondary-fixed mb-4">Consultation Cadastrale</h3>
+<p class="text-on-surface-variant font-body-md mb-6">Accédez aux plans cadastraux numériques et vérifiez les limites de propriété.</p>
+<a class="inline-flex items-center text-gold-accent font-bold hover:gap-2 transition-all" href="#">
+                    Explorer <span class="material-symbols-outlined ml-1">arrow_forward</span>
+</a>
+</div>
+<!-- Card 3 -->
+<div class="glass-card p-8 rounded-[24px] group hover:scale-[1.02] transition-all duration-300 border-white/20">
+<div class="w-16 h-16 bg-on-secondary-fixed/5 rounded-xl flex items-center justify-center mb-6 group-hover:bg-gold-accent/10 transition-colors">
+<span class="material-symbols-outlined text-on-secondary-fixed text-4xl" data-icon="description">description</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-secondary-fixed mb-4">Certificat d'Urbanisme</h3>
+<p class="text-on-surface-variant font-body-md mb-6">Obtenez les informations juridiques et administratives sur un terrain spécifique.</p>
+<a class="inline-flex items-center text-gold-accent font-bold hover:gap-2 transition-all" href="#">
+                    Demander <span class="material-symbols-outlined ml-1">arrow_forward</span>
+</a>
+</div>
+<!-- Card 4 -->
+<div class="glass-card p-8 rounded-[24px] group hover:scale-[1.02] transition-all duration-300 border-white/20">
+<div class="w-16 h-16 bg-on-secondary-fixed/5 rounded-xl flex items-center justify-center mb-6 group-hover:bg-gold-accent/10 transition-colors">
+<span class="material-symbols-outlined text-on-secondary-fixed text-4xl" data-icon="swap_horiz">swap_horiz</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-secondary-fixed mb-4">Mutation Foncière</h3>
+<p class="text-on-surface-variant font-body-md mb-6">Transférez la propriété d'un bien immobilier en toute sécurité et transparence.</p>
+<a class="inline-flex items-center text-gold-accent font-bold hover:gap-2 transition-all" href="#">
+                    Initialiser <span class="material-symbols-outlined ml-1">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Interactive Map Section -->
+<section class="py-20 bg-white">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="flex flex-col md:flex-row gap-16 items-center">
+<div class="w-full md:w-1/2">
+<h2 class="font-display-lg text-display-lg text-on-secondary-fixed mb-6 leading-tight">Vision Lomé 2030 : <br/><span class="text-gold-accent">Plan Directeur</span></h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8">Découvrez les zones de développement prioritaire, les futurs axes de transport et les réserves foncières stratégiques de la capitale.</p>
+<ul class="space-y-6 mb-10">
+<li class="flex items-center gap-4">
+<span class="material-symbols-outlined text-gold-accent" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-body-md text-on-secondary-fixed">Zones de mixité sociale et résidentielle</span>
+</li>
+<li class="flex items-center gap-4">
+<span class="material-symbols-outlined text-gold-accent" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-body-md text-on-secondary-fixed">Nouveaux poumons verts et parcs urbains</span>
+</li>
+<li class="flex items-center gap-4">
+<span class="material-symbols-outlined text-gold-accent" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-body-md text-on-secondary-fixed">Infrastructures portuaires et commerciales</span>
+</li>
+</ul>
+<button class="border-2 border-on-secondary-fixed text-on-secondary-fixed px-8 py-3 rounded-full font-label-sm text-label-sm hover:bg-on-secondary-fixed hover:text-white transition-all duration-300">
+                        CONSULTER LE PLAN INTÉGRAL
+                    </button>
+</div>
+<div class="w-full md:w-1/2 relative">
+<div class="aspect-square rounded-[40px] overflow-hidden shadow-2xl border-4 border-white">
+<img class="w-full h-full object-cover grayscale-[20%]" data-alt="A highly detailed, sophisticated digital map representation of Lomé, Togo. The map uses a premium dark mode color scheme with glowing golden arteries for main roads and deep navy blue for water bodies. Overlaid onto the map are glassmorphic callout boxes indicating 2030 development projects with modern geometric icons. The aesthetic is clean, professional, and futuristic." data-location="Lomé" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3jyxj_vtI2g4r5MKbtiKm1Ks1hCS1JikaSe8cwoeiQf8-RRlgf4e0QUSPXj1meuBtZ92jmCrQIMzNrZA3nCqd8icknD-_YIk5JMeyizYIaoLaZehYMAWk25fz_cUge5OIrGXQ8G3oXld-f6v_9ZEIoM__yR6gj-v430riUlJfxWczukuP4eLECF2kxWu9P8CqqjukAx1YaBabL7JNza0iMWCmAtNduXhOJDjdgooHDBf3CLKEm98amna5tC-lPPXT09U7a4ruAg"/>
+<div class="absolute inset-0 bg-secondary/10 pointer-events-none"></div>
+</div>
+<!-- Floating Stat -->
+<div class="absolute -bottom-8 -left-8 glass-card p-6 rounded-2xl border-gold-accent/30 shadow-xl">
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest mb-1">Mise à jour</p>
+<p class="font-headline-lg text-headline-lg text-on-secondary-fixed">Sept 2024</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Support Center -->
+<section class="py-20 bg-on-secondary-fixed overflow-hidden relative">
+<div class="absolute top-0 right-0 w-1/2 h-full opacity-10">
+<span class="material-symbols-outlined text-[400px] absolute -right-20 -top-20 text-white" data-icon="support_agent">support_agent</span>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop relative z-10 text-white">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+<div>
+<h2 class="font-display-lg text-display-lg mb-6">Expertise &amp; <br/>Accompagnement</h2>
+<p class="font-body-lg text-body-lg text-white/70 mb-8">Besoin d'un conseil spécialisé pour vos projets immobiliers complexes ? Nos experts du Centre de Support Foncier vous reçoivent pour des consultations personnalisées.</p>
+<div class="grid grid-cols-2 gap-8 mb-12">
+<div>
+<p class="text-gold-accent font-headline-lg mb-2">48h</p>
+<p class="font-label-sm text-label-sm opacity-60">Délai de réponse moyen</p>
+</div>
+<div>
+<p class="text-gold-accent font-headline-lg mb-2">100%</p>
+<p class="font-label-sm text-label-sm opacity-60">Digitalisé &amp; Sécurisé</p>
+</div>
+</div>
+<button class="bg-gold-accent text-on-secondary-fixed px-10 py-4 rounded-full font-label-sm text-label-sm font-bold hover:scale-105 transition-transform">
+                        PRENDRE RENDEZ-VOUS
+                    </button>
+</div>
+<div class="grid grid-cols-1 gap-6">
+<div class="bg-white/10 backdrop-blur-md p-8 rounded-3xl border border-white/10 hover:bg-white/15 transition-colors cursor-pointer">
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined text-4xl text-gold-accent" data-icon="videocam">videocam</span>
+<div>
+<h4 class="font-title-md text-title-md">Visioconférence</h4>
+<p class="text-white/60 font-body-md">Session de 30 min avec un expert cadastre.</p>
+</div>
+</div>
+</div>
+<div class="bg-white/10 backdrop-blur-md p-8 rounded-3xl border border-white/10 hover:bg-white/15 transition-colors cursor-pointer">
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined text-4xl text-gold-accent" data-icon="forum">forum</span>
+<div>
+<h4 class="font-title-md text-title-md">Chat Direct</h4>
+<p class="text-white/60 font-body-md">Assistance immédiate pour vos dossiers en cours.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-on-secondary-fixed dark:bg-primary-container text-white py-16 border-t border-outline/30">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto">
+<div>
+<h3 class="font-title-md text-title-md text-tertiary-fixed mb-8">Commune de Lomé</h3>
+<p class="text-surface-variant/80 font-body-md mb-8">L'excellence au service de chaque citoyen togolais. Tradition et futurisme unis.</p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-white/50 cursor-pointer hover:text-gold-accent transition-colors">public</span>
+<span class="material-symbols-outlined text-white/50 cursor-pointer hover:text-gold-accent transition-colors">share</span>
+<span class="material-symbols-outlined text-white/50 cursor-pointer hover:text-gold-accent transition-colors">verified_user</span>
+</div>
+</div>
+<div>
+<h4 class="font-label-sm text-label-sm uppercase tracking-widest mb-6 opacity-50">Navigation</h4>
+<ul class="space-y-4">
+<li><a class="text-surface-variant/80 hover:text-white transition-colors hover:underline" href="#">Accueil</a></li>
+<li><a class="text-surface-variant/80 hover:text-white transition-colors hover:underline" href="#">E-Services</a></li>
+<li><a class="text-surface-variant/80 hover:text-white transition-colors hover:underline" href="#">Actualités</a></li>
+<li><a class="text-surface-variant/80 hover:text-white transition-colors hover:underline" href="#">Plan du site</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-sm text-label-sm uppercase tracking-widest mb-6 opacity-50">Légal</h4>
+<ul class="space-y-4">
+<li><a class="text-surface-variant/80 hover:text-white transition-colors hover:underline" href="#">Mentions Légales</a></li>
+<li><a class="text-surface-variant/80 hover:text-white transition-colors hover:underline" href="#">Confidentialité</a></li>
+<li><a class="text-surface-variant/80 hover:text-white transition-colors hover:underline" href="#">Accessibilité</a></li>
+<li><a class="text-surface-variant/80 hover:text-white transition-colors hover:underline" href="#">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-sm text-label-sm uppercase tracking-widest mb-6 opacity-50">Contact</h4>
+<p class="text-surface-variant/80 mb-4">Hôtel de Ville de Lomé</p>
+<p class="text-surface-variant/80 mb-4">+228 22 21 00 00</p>
+<p class="text-gold-accent font-bold">contact@lome.tg</p>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop mt-16 pt-8 border-t border-white/10 text-center opacity-60">
+<p>© 2024 Commune de Lomé - Excellence &amp; Tradition.</p>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Espace Citoyen - Commune de Lomé</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary": "#0054cb",
+                        "outline": "#78767b",
+                        "on-error-container": "#93000a",
+                        "surface": "#f9f9f9",
+                        "on-primary-fixed": "#1b1b1f",
+                        "on-surface": "#1a1c1c",
+                        "on-secondary-container": "#fefcff",
+                        "tertiary-container": "#cca730",
+                        "secondary-fixed": "#dae2ff",
+                        "on-secondary": "#ffffff",
+                        "tertiary": "#735c00",
+                        "primary": "#000000",
+                        "tertiary-fixed-dim": "#e9c349",
+                        "primary-fixed": "#e4e1e7",
+                        "background": "#f9f9f9",
+                        "on-secondary-fixed-variant": "#0040a0",
+                        "surface-bright": "#f9f9f9",
+                        "surface-variant": "#e2e2e2",
+                        "on-surface-variant": "#47464b",
+                        "on-background": "#1a1c1c",
+                        "on-tertiary-fixed": "#241a00",
+                        "surface-tint": "#5f5e62",
+                        "inverse-surface": "#2f3131",
+                        "secondary-fixed-dim": "#b1c5ff",
+                        "surface-container-low": "#f3f3f3",
+                        "inverse-on-surface": "#f0f1f1",
+                        "on-primary-fixed-variant": "#47464b",
+                        "on-error": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed-dim": "#c8c5cb",
+                        "error-container": "#ffdad6",
+                        "primary-container": "#1b1b1f",
+                        "on-tertiary-fixed-variant": "#574500",
+                        "surface-container": "#eeeeee",
+                        "tertiary-fixed": "#ffe088",
+                        "error": "#ba1a1a",
+                        "surface-dim": "#dadada",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-secondary-fixed": "#001847",
+                        "on-primary": "#ffffff",
+                        "surface-container-high": "#e8e8e8",
+                        "inverse-primary": "#c8c5cb",
+                        "outline-variant": "#c8c5cb",
+                        "secondary-container": "#316ee8",
+                        "on-tertiary-container": "#4f3e00",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-container": "#848388"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "margin-desktop": "80px",
+                        "margin-tablet": "40px",
+                        "container-max": "1440px",
+                        "margin-mobile": "20px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Montserrat"],
+                        "body-md": ["Inter"],
+                        "display-lg": ["Montserrat"],
+                        "body-lg": ["Inter"],
+                        "title-md": ["Montserrat"],
+                        "headline-lg": ["Montserrat"],
+                        "label-sm": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["24px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "title-md": ["20px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "label-sm": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .glass-dark {
+            background: rgba(27, 27, 31, 0.7);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .emerald-gradient {
+            background: linear-gradient(135deg, #006a4e 0%, #004d3a 100%);
+        }
+        .gold-accent {
+            background: linear-gradient(135deg, #ffe088 0%, #cca730 100%);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #FAFAFA;
+            color: #1a1c1c;
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/70 dark:bg-primary-container/70 backdrop-blur-xl border-b border-white/20">
+<nav class="flex justify-between items-center px-margin-desktop h-20 max-w-container-max mx-auto">
+<div class="flex items-center gap-4">
+<img alt="Togolese national emblem" class="h-10 w-auto" data-alt="The national coat of arms of Togo featuring two lions flanking a golden shield with the letters RT for République Togolaise. The emblem is rendered in high detail with vibrant reds, golds, and greens, positioned as a symbol of authority on a clean white background. This visual communicates prestigious governance and national pride in a modern digital portal context." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAylAXsuuySZkz7CoENi-BuKEV9qqa0yI7bKpYVWBR9QvkYSuWoZ98tPiiq5kf8mAAc6nhNQOBYeNNJIl_J9p_K6OzFWC5jHQ5PTJU_SPmU0uIZobU-zp5_I73qqbOlSWoGKZAS8CLXqUG_ZkqN5kreExC_UvoyvKvFqHk9_vN5LjKQUXEbpCByYgE-Su47NfTk6jPnnXDuJKpX3_s8sqBUZhmMnAH4QAzUO8f0Lt3dJX-kAIoXeGlFAZW0sqM1a8pBb7P2qcoZqA"/>
+<span class="text-title-md font-title-md font-bold text-on-secondary-fixed dark:text-white">Commune de Lomé</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-label-sm text-label-sm text-secondary dark:text-tertiary-fixed font-bold border-b-2 border-secondary dark:border-tertiary-fixed pb-1" href="#">Accueil</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-outline-variant hover:text-secondary transition-all duration-300" href="#">Citoyenneté</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-outline-variant hover:text-secondary transition-all duration-300" href="#">Urbanisme</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-outline-variant hover:text-secondary transition-all duration-300" href="#">Fiscalité</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant dark:text-outline-variant hover:text-secondary transition-all duration-300" href="#">Actualités</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="bg-secondary px-6 py-2 rounded-full text-white font-label-sm text-label-sm hover:scale-102 transition-transform duration-300">E-Services</button>
+<div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center border-2 border-white/50 shadow-sm overflow-hidden">
+<img alt="User Avatar" data-alt="A professional portrait of a West African man with a friendly expression, dressed in a sharp business suit. The image is a close-up profile picture with soft, studio lighting that highlights skin texture and warmth. Set against a neutral gray background, it represents a modern professional user of a high-end digital municipal portal." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_7EbWG4J7eqvsDd5z0763OsJdgRQ14BE1Wnj2rcWOLI3X25FBNpkFd8rj04Vv5m1p1aWgDBBMChSYFfmHEqBAmX2mVfLpMsRnnDSkaiH6ChJWcqSJSDhe2SqEhtA2V7X0qMsS8UIeQESnpO2ijxtLqgW6X45ZvU_9fxiQWPlOQAUmgGRgwBa3FV1yEzu-1Ik1D1THbWasUy6_x_GUh8RUMR8qjOMfrwHUTemg4KwW1ygZowq9YbrTeKw2KFWGliEdr4F5ileO6A"/>
+</div>
+</div>
+</nav>
+</header>
+<!-- Side Navigation Drawer -->
+<aside class="fixed left-0 top-0 h-full w-80 bg-white dark:bg-primary-container shadow-xl z-40 pt-24 border-r border-outline/10 hidden lg:block">
+<div class="px-6 py-4">
+<h2 class="font-title-md text-title-md text-primary mb-8">Menu Municipal</h2>
+<div class="space-y-2">
+<a class="flex items-center gap-4 p-4 text-on-surface-variant hover:bg-surface-container-high transition-colors rounded-xl group" href="#">
+<span class="material-symbols-outlined group-hover:text-secondary">home</span>
+<span class="font-body-md">Ma Ville</span>
+</a>
+<a class="flex items-center gap-4 p-4 bg-secondary-fixed dark:bg-secondary-container text-on-secondary-fixed rounded-xl" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+<span class="font-body-md font-bold">Espace Citoyen</span>
+</a>
+<a class="flex items-center gap-4 p-4 text-on-surface-variant hover:bg-surface-container-high transition-colors rounded-xl group" href="#">
+<span class="material-symbols-outlined group-hover:text-secondary">receipt_long</span>
+<span class="font-body-md">Mes Documents</span>
+</a>
+<a class="flex items-center gap-4 p-4 text-on-surface-variant hover:bg-surface-container-high transition-colors rounded-xl group" href="#">
+<span class="material-symbols-outlined group-hover:text-secondary">payments</span>
+<span class="font-body-md">Paiements &amp; Taxes</span>
+</a>
+<a class="flex items-center gap-4 p-4 text-on-surface-variant hover:bg-surface-container-high transition-colors rounded-xl group" href="#">
+<span class="material-symbols-outlined group-hover:text-secondary">settings</span>
+<span class="font-body-md">Paramètres</span>
+</a>
+</div>
+</div>
+<div class="absolute bottom-10 left-6 right-6">
+<div class="glass-panel p-4 rounded-2xl border border-secondary/10 emerald-gradient text-white">
+<p class="text-xs opacity-80 mb-2">Support Citoyen</p>
+<p class="font-bold text-sm">Besoin d'aide ?</p>
+<button class="mt-4 w-full bg-white text-on-secondary-fixed-variant py-2 rounded-lg text-xs font-bold">Contacter la Mairie</button>
+</div>
+</div>
+</aside>
+<main class="lg:ml-80 pt-20 min-h-screen">
+<!-- Welcome Section -->
+<section class="relative h-[400px] w-full overflow-hidden">
+<img alt="Modern Lomé Administration" class="absolute inset-0 w-full h-full object-cover" data-alt="A wide-angle landscape photograph of a modern glass-and-steel administrative building in Lomé, Togo, during the golden hour. The building reflects a vibrant sunset of oranges and deep blues, surrounded by lush green palm trees and manicured lawns. The atmosphere is prestigious, serene, and represents the future of African urban governance and architecture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4cOnlp5tPNLfqpl9zUqaKKG1-JBtikznWeZAc2Tn577WuB7p9Wy43dE23_zgHLYCv9i37H3Pv9yNK0hMMngfQsZQfdL7QkOYlkHJXcIS2Ly_TSrTzx7DBhWUL3SX8Q-9x69C9ZTFZ1iZIqcRgNCf25pflwf3mBNShqCo0iUCaoxC_2enSMD0eZ8O1AxXWWDXKkU8xdpfA-Ao-lpjQ4WZPjndWP9BPF5OOZiteasQ_ep94s7YT6qqkbWaZDSO2x4tbX7OmBcPklg"/>
+<div class="absolute inset-0 bg-gradient-to-r from-primary/80 to-transparent flex items-center px-margin-desktop">
+<div class="max-w-2xl">
+<span class="text-tertiary-fixed font-bold tracking-widest text-xs uppercase mb-4 block">Portail de Lomé</span>
+<h1 class="text-white font-display-lg text-display-lg mb-4">Bienvenue, Koffi Agbo</h1>
+<p class="text-white/80 font-body-lg text-body-lg">Gérez vos démarches administratives avec une efficacité et une transparence de classe mondiale.</p>
+</div>
+</div>
+</section>
+<div class="px-margin-desktop -mt-20 relative z-10 pb-20">
+<!-- Quick Stats -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter mb-16">
+<div class="glass-panel p-8 rounded-[24px] hover:scale-102 transition-transform duration-300 flex items-center justify-between group">
+<div>
+<p class="text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">Dossiers en cours</p>
+<h3 class="text-4xl font-bold mt-2">04</h3>
+</div>
+<div class="w-14 h-14 rounded-2xl bg-secondary-fixed flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl">folder_shared</span>
+</div>
+</div>
+<div class="glass-panel p-8 rounded-[24px] hover:scale-102 transition-transform duration-300 flex items-center justify-between group">
+<div>
+<p class="text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">Documents validés</p>
+<h3 class="text-4xl font-bold mt-2">12</h3>
+</div>
+<div class="w-14 h-14 rounded-2xl bg-tertiary-fixed flex items-center justify-center text-tertiary group-hover:emerald-gradient group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl">verified</span>
+</div>
+</div>
+<div class="glass-panel p-8 rounded-[24px] hover:scale-102 transition-transform duration-300 flex items-center justify-between group">
+<div>
+<p class="text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">Messages</p>
+<h3 class="text-4xl font-bold mt-2">07</h3>
+</div>
+<div class="w-14 h-14 rounded-2xl bg-primary-fixed flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl">mail</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Detailed Dossier Tracking -->
+<div class="lg:col-span-8 space-y-gutter">
+<div class="glass-panel p-8 rounded-[24px]">
+<div class="flex justify-between items-center mb-10">
+<h2 class="font-headline-lg text-headline-lg text-primary">Suivi de mes dossiers</h2>
+<button class="text-secondary font-bold text-sm flex items-center gap-2 hover:underline">
+                                Voir tout <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+<div class="space-y-8">
+<!-- Procedure 1 -->
+<div class="group">
+<div class="flex justify-between items-end mb-3">
+<div>
+<p class="text-xs font-bold text-secondary-container mb-1">REF: LOM-2024-884</p>
+<h4 class="font-title-md text-title-md">Permis de Construire (Zone A1)</h4>
+</div>
+<span class="px-4 py-1.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-bold text-xs">En cours</span>
+</div>
+<div class="w-full h-3 bg-surface-variant rounded-full overflow-hidden">
+<div class="h-full bg-secondary w-3/4 rounded-full"></div>
+</div>
+<div class="flex justify-between mt-2 text-xs text-on-surface-variant">
+<span>Soumis: 12 Mars 2024</span>
+<span class="font-bold">Etape 3/4: Inspection technique</span>
+</div>
+</div>
+<!-- Procedure 2 -->
+<div class="group">
+<div class="flex justify-between items-end mb-3">
+<div>
+<p class="text-xs font-bold text-secondary-container mb-1">REF: LOM-2024-102</p>
+<h4 class="font-title-md text-title-md">Acte de Naissance (Copie intégrale)</h4>
+</div>
+<span class="px-4 py-1.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-bold text-xs">Approuvé</span>
+</div>
+<div class="w-full h-3 bg-surface-variant rounded-full overflow-hidden">
+<div class="h-full bg-tertiary w-full rounded-full"></div>
+</div>
+<div class="flex justify-between mt-2 text-xs text-on-surface-variant">
+<span>Soumis: 28 Fév 2024</span>
+<span class="font-bold">Disponible au retrait</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Quick Actions -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<button class="glass-panel p-6 rounded-[24px] hover:bg-secondary hover:text-white transition-all duration-300 flex flex-col items-center gap-3 text-center group">
+<div class="w-12 h-12 rounded-full bg-secondary/10 group-hover:bg-white/20 flex items-center justify-center">
+<span class="material-symbols-outlined">event</span>
+</div>
+<span class="font-bold text-sm">Prendre RDV</span>
+</button>
+<button class="glass-panel p-6 rounded-[24px] hover:bg-tertiary hover:text-white transition-all duration-300 flex flex-col items-center gap-3 text-center group">
+<div class="w-12 h-12 rounded-full bg-tertiary/10 group-hover:bg-white/20 flex items-center justify-center">
+<span class="material-symbols-outlined">account_balance_wallet</span>
+</div>
+<span class="font-bold text-sm">Payer Taxe</span>
+</button>
+<button class="glass-panel p-6 rounded-[24px] hover:bg-error hover:text-white transition-all duration-300 flex flex-col items-center gap-3 text-center group">
+<div class="w-12 h-12 rounded-full bg-error/10 group-hover:bg-white/20 flex items-center justify-center">
+<span class="material-symbols-outlined">report</span>
+</div>
+<span class="font-bold text-sm">Signaler un problème</span>
+</button>
+</div>
+</div>
+<!-- Digital Wallet -->
+<div class="lg:col-span-4 space-y-gutter">
+<div class="glass-panel p-8 rounded-[24px] bg-gradient-to-br from-white/90 to-secondary-fixed/30 border border-secondary/20">
+<h2 class="font-headline-lg text-title-md text-primary mb-8 flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">account_balance_wallet</span>
+                            Portefeuille Numérique
+                        </h2>
+<!-- CNI Digital Card -->
+<div class="relative overflow-hidden rounded-2xl mb-6 shadow-lg group">
+<div class="emerald-gradient p-6 aspect-[1.6/1] text-white flex flex-col justify-between relative z-10">
+<div class="flex justify-between items-start">
+<div class="flex items-center gap-2">
+<img alt="Togo Logo" class="h-6 w-auto brightness-0 invert" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrpSNAbEvt-ZTtomwqk688tdjaAYtAYPMHsv0AmZuDst-1s9wEr5SY1NNNiqL_pQ06IDFJcHMHr0t0CYolv9KHYKbqa0_ozIihljlajG63w1KGXIYN56qSZXANxbPbHCmU-SYHayvAE23L63sH_Xdb2k6G4781A0Zk7Y2XdEmOvhcP7pdPwWrYiuBUK4FiuN9SaYmyC70W-V18s6gjIhWaAGD8kTQwjps2QoFePpUYMaelh9pcQrqNReo0edy-0bcWnL4SZFEw5Q"/>
+<div class="text-[10px] leading-tight font-bold uppercase tracking-widest">République Togolaise<br/>Carte d'Identité</div>
+</div>
+<span class="material-symbols-outlined text-3xl opacity-50">contactless</span>
+</div>
+<div>
+<p class="text-[10px] uppercase opacity-70 mb-1">Nom Complet</p>
+<p class="font-bold tracking-wider">KOFFI AGBO</p>
+</div>
+<div class="flex justify-between items-end">
+<div>
+<p class="text-[8px] uppercase opacity-70">ID Numérique</p>
+<p class="font-mono text-sm">TG-102-9983-441</p>
+</div>
+<div class="bg-white p-1 rounded-sm">
+<img alt="QR Verification" class="w-10 h-10" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDa64bl6FGG4ZYHycDJdE1pIpE6gQYgIMjI1T0pxO0fN_ku4TQZ2zc4a_mifzsk1_Q9NRulouh5LKM0NG7Hvn1MyivFsAtu3_F2S6c6C6QsI9-fR6MoKcgiFuPvq7TWO1dYHR7haJMMbV14ovfY_oV6XJY0TSAN47B3AlhQwFX4-Ngd6Y6nP193cRgtxu6soreDFmnD6Mr1Vt4P6CLdk53uvUYy5qg_XbF_dqh_EmIzgW7A1Hs4Y79Z85JoL0os_v3uIhzB4bUgGw"/>
+</div>
+</div>
+</div>
+<div class="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<!-- Secondary Document -->
+<div class="bg-white/60 p-4 rounded-2xl border border-outline/10 flex items-center gap-4 hover:border-secondary/30 cursor-pointer transition-colors">
+<div class="w-12 h-12 rounded-lg bg-surface flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary">description</span>
+</div>
+<div class="flex-1">
+<p class="font-bold text-sm">Permis de Conduire</p>
+<p class="text-[10px] text-on-surface-variant">Expire le 12/05/2026</p>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant">chevron_right</span>
+</div>
+<button class="mt-8 w-full py-4 border-2 border-dashed border-outline/30 rounded-2xl text-on-surface-variant font-bold text-sm hover:border-secondary/50 hover:text-secondary transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">add_circle</span>
+                            Ajouter un document
+                        </button>
+</div>
+<!-- Activity Feed -->
+<div class="glass-panel p-6 rounded-[24px]">
+<h4 class="font-bold text-sm mb-4">Notifications Récentes</h4>
+<div class="space-y-4">
+<div class="flex gap-4">
+<div class="w-2 h-2 rounded-full bg-secondary mt-2"></div>
+<div>
+<p class="text-xs font-bold">Paiement Reçu</p>
+<p class="text-[10px] text-on-surface-variant">Taxe d'habitation - Reçu #4451</p>
+<p class="text-[10px] text-secondary mt-1">Il y a 2 heures</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="w-2 h-2 rounded-full bg-tertiary mt-2"></div>
+<div>
+<p class="text-xs font-bold">Document Prêt</p>
+<p class="text-[10px] text-on-surface-variant">Votre acte de naissance est prêt.</p>
+<p class="text-[10px] text-secondary mt-1">Hier, 16:45</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="lg:ml-80 bg-on-secondary-fixed dark:bg-primary-container text-white py-12">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto">
+<div class="space-y-4">
+<h3 class="font-title-md text-title-md text-tertiary-fixed">Commune de Lomé</h3>
+<p class="text-sm text-surface-variant/80">L'excellence au service du citoyen togolais. Tradition et modernité unies pour un avenir prospère.</p>
+</div>
+<div class="space-y-4">
+<h4 class="font-bold text-sm">Services</h4>
+<ul class="space-y-2 text-sm text-surface-variant/80">
+<li><a class="hover:text-white hover:underline transition-all" href="#">État Civil</a></li>
+<li><a class="hover:text-white hover:underline transition-all" href="#">Impôts Fonciers</a></li>
+<li><a class="hover:text-white hover:underline transition-all" href="#">Permis &amp; Urbanisme</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-bold text-sm">Contact</h4>
+<ul class="space-y-2 text-sm text-surface-variant/80">
+<li>Hôtel de Ville, Lomé</li>
+<li>Tel: +228 22 21 00 00</li>
+<li>Email: info@lome.tg</li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-bold text-sm">Légal</h4>
+<ul class="space-y-2 text-sm text-surface-variant/80">
+<li><a class="hover:text-white hover:underline transition-all" href="#">Mentions Légales</a></li>
+<li><a class="hover:text-white hover:underline transition-all" href="#">Confidentialité</a></li>
+<li><a class="hover:text-white hover:underline transition-all" href="#">Accessibilité</a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-white/10 mt-12 pt-8 text-center px-margin-desktop">
+<p class="text-xs text-surface-variant/60">© 2024 Commune de Lomé - Excellence &amp; Tradition. Réalisé avec fierté pour le Togo.</p>
+</div>
+</footer>
+</body></html>
